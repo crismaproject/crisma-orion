@@ -1,0 +1,9 @@
+/var/log/contextBroker/contextBrokerLog {
+ copytruncate
+ daily
+ rotate 7
+ nocompress
+ missingok
+ size 5M
+}
+}
