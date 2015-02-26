@@ -51,8 +51,9 @@ RUN git clone https://github.com/staropram/cantcoap && \
     cp nethelper.h /usr/local/include && \
     cp libcantcoap.a /usr/local/lib
 
-RUN git clone --depth 1 --branch 0.19.0 https://github.com/telefonicaid/fiware-orion && \
+RUN git clone https://github.com/telefonicaid/fiware-orion && \
     cd fiware-orion && \
+    git checkout 0.16.0-FIWARE-4.1.1 && \
     make && \
     make install && \
     cp etc/init.d/contextBroker.centos /etc/init.d/contextBroker && \
